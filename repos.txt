@@ -1,0 +1,36 @@
+#Specs
+ethereum/execution-specs
+ethereum/consensus-specs
+ethereum/execution-apis
+ethereum/beacon-apis
+#Execution clients
+NethermindEth/nethermind
+hyperledger/besu
+ledgerwatch/erigon
+ethereum/go-ethereum
+paradigmxyz/reth
+ethereumjs/ethereumjs-monorepo
+erigontech/silkworm
+#Consensus clients
+status-im/nimbus-eth2
+sigp/lighthouse
+prysmaticlabs/prysm
+grandinetech/grandine
+ConsenSys/teku
+ChainSafe/lodestar
+#Testing
+ethereum/tests
+ethereum/retesteth
+ethereum/execution-spec-tests
+ethereum/hive
+kurtosis-tech/kurtosis
+lightclient/rpctestgen
+#Devops tooling
+ethpandaops/assertoor
+ethpandaops/tracoor
+ethpandaops/checkpointz
+ethpandaops/ethereum-package
+ethpandaops/dora
+#Meta and other
+eth-protocol-fellows/protocol-studies
+ethereum/EIPw
