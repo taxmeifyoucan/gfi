@@ -1,23 +1,69 @@
 style.css
  <style>
         body {
-            font-family: Arial, sans-serif;
-        }
-        h1 {
-            color: #333;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin: 10px 0;
-        }
-        a {
-            text-decoration: none;
-            color: #007bff;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
+		    font-family: Arial, sans-serif;
+		    display: flex;
+		    justify-content: space-between;
+		    padding: 0;
+		    margin: 0;
+		}
+
+		h1 {
+		    color: #333;
+		}
+
+		ul {
+		    list-style-type: none;
+		    padding: 0;
+		}
+
+		li {
+		    margin: 10px 0;
+		}
+
+		a {
+		    text-decoration: none;
+		    color: #007bff;
+		}
+
+		a:hover {
+		    text-decoration: underline;
+		}
+
+		.content {
+		    flex: 1;
+		    padding: 20px;
+		}
+
+		.menu {
+		    width: 200px;
+		    padding: 20px;
+		    background-color: #f4f4f4;
+		    border-left: 1px solid #ddd;
+		    position: fixed;
+		    right: 0;
+		    top: 0;
+		    height: 100%;
+		    overflow-y: auto;
+		}
+
+		.menu h2 {
+		    margin-top: 0;
+		}
+
+		.menu-item {
+		    margin-bottom: 10px;
+		}
+
+		.item {
+		    margin-bottom: 20px;
+		}
+
+		.item-link {
+		    font-weight: bold;
+		}
+
+		.item-state, .item-assign {
+		    margin-top: 5px;
+		}
     </style>

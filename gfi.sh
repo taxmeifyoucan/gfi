@@ -40,12 +40,24 @@ while IFS= read -r REPO; do
     #api call with list of labels to pull
     issues=$(gh issue list --repo $REPO --search 'label:"good first issue","D-good-first-issue","E-easy"' --json title --json url)
 
+    #Print raw JSON for debugging
+    echo "#issues" > issues_raw.json
+
     # pulls title and link from json, there is more fields to add
     while IFS= read -r line; do
+        echo "$line" > issues_raw.json #debugging save each issue raw
+        
         title=$(echo "$line" | jq -r '.title')
         link=$(echo "$line" | jq -r '.url')
+        state=$(echo "$line" | jq -r '.state')
+        assignees=$(echo "line" | jq -r '.assignees')
+        
         html_content="$html_content
-        <li><a href=\"$link\" target=\"_blank\">$title</a></li>"
+        <li>
+            <a href=\"$link\" target=\"_blank\">$title</a>
+            # <strong>State:</strong> $state<br>
+            # <strong>Assigned to:</strong> $assignees<br> 
+        </li>"
     done <<< "$(echo "$issues" | jq -c '.[]')"
 
     html_content="$html_content
