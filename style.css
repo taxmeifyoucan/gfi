@@ -1,0 +1,126 @@
+style.css
+ <style>
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    color: #333;
+}
+
+h2 {
+	display: inline-block;
+	background-color: lightgrey;
+	padding: 7px;
+	border: 1px slategrey solid;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.repo-header {
+	padding: 5px 0px 5px 0px;
+	border-top: 1px lightgrey solid;
+	border-bottom: 2px lightgrey solid;
+}
+
+.repo-header a {
+	color: slategrey;
+	text-decoration: underline;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.menu {
+    width: 250px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-left: 1px solid #ddd;
+    position: fixed;
+    right: -270px; /* Hide the menu by default */
+    top: 0;
+    height: 100%;
+    overflow-y: auto;
+    transition: right 0.3s ease-in-out; /* Animation for sliding */
+}
+
+.menu h2 {
+    margin-top: 0;
+    background-color: transparent;
+}
+
+.menu-item {
+    margin-bottom: 10px;
+}
+
+.item {
+    margin-bottom: 20px;
+}
+
+.item-link {
+    font-weight: bold;
+}
+
+.item-state, .item-assign {
+    margin-top: 5px;
+}
+
+/* When the menu is targeted, slide it into the viewport */
+#menu:target {
+    right: 0;
+}
+
+/* Hide the menu when targeting the close link */
+#close:target ~ .menu {
+    right: -270px;
+}    
+
+.menu-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: right 0.3s ease-in-out; /* Animation for sliding */
+}
+
+/* Button inside the menu to close it */
+.close-button {
+    position: absolute;
+    top: 10px;
+    left: 250px;
+    background-color: #ff0000;
+    color: white;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+    </style>
